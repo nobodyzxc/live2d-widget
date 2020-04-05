@@ -21,7 +21,7 @@
 		"selector": "#waifu-tool .fa-info-circle",
 		"text": ["來看看我是怎麼生出來的～"]
 	}, {
-		"selector": "#waifu-tool .fa-times",
+		"selector": "#waifu-tool .fa-eye",
 		"text": ["你要和我玩躲貓貓嘛？"]
 	}, {
 		"selector": "#waifu-tool .fa-paper-plane",

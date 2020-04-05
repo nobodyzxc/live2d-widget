@@ -14,10 +14,8 @@ function loadWidget(config) {
 	localStorage.removeItem("waifu-display");
 	sessionStorage.removeItem("waifu-text");
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
-            <div id="waifu-main">
-                <div id="waifu-tips"></div>
-                <canvas id="live2d" width="300" height="300"></canvas>
-            </div>
+            <div id="waifu-tips"></div>
+            <canvas id="live2d" width="300" height="300"></canvas>
 			<div id="waifu-tool">
 				<span class="fa fa-lg fa-arrow-up"></span>
 				<span class="fa fa-lg fa-comment"></span>
@@ -26,7 +24,7 @@ function loadWidget(config) {
 				<!-- <span class="fa fa-lg fa-street-view"></span> -->
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
-				<span class="fa fa-lg fa-times"></span>
+				<span class="fa fa-lg fa-eye"></span>
 				<span class="fa fa-lg fa-arrow-down"></span>
 			</div>
 		</div>`);
@@ -97,12 +95,20 @@ function loadWidget(config) {
 		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
 			open("https://github.com/nobodyzxc/live2d-widget");
 		});
-		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
+		document.querySelector("#waifu-tool .fa-eye").addEventListener("click", () => {
 			//localStorage.setItem("waifu-display", Date.now());
-			showMessage("躲好啦", 2000, 11);
 			//document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
-				document.getElementById("waifu-main").style.display = "none";
+                if(document.getElementById("waifu-tips").style.display != 'none'){
+                    showMessage("躲好啦", 2000, 11);
+                    document.getElementById("waifu-tips").style.display = "none";
+                    document.getElementById("live2d").style.visibility = "hidden";
+                }
+                else{
+                    showMessage("你叫我？", 2000, 11);
+                    document.getElementById("waifu-tips").style.display = "block";
+                    document.getElementById("live2d").style.visibility = "visible";
+                }
 				//document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
