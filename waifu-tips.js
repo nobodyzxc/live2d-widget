@@ -14,16 +14,20 @@ function loadWidget(config) {
 	localStorage.removeItem("waifu-display");
 	sessionStorage.removeItem("waifu-text");
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu">
-			<div id="waifu-tips"></div>
-			<canvas id="live2d" width="300" height="300"></canvas>
+            <div id="waifu-main">
+                <div id="waifu-tips"></div>
+                <canvas id="live2d" width="300" height="300"></canvas>
+            </div>
 			<div id="waifu-tool">
+				<span class="fa fa-lg fa-arrow-up"></span>
 				<span class="fa fa-lg fa-comment"></span>
 				<span class="fa fa-lg fa-paper-plane"></span>
-				<span class="fa fa-lg fa-user-circle"></span>
-				<span class="fa fa-lg fa-street-view"></span>
+				<!-- <span class="fa fa-lg fa-user-circle"></span> -->
+				<!-- <span class="fa fa-lg fa-street-view"></span> -->
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
 				<span class="fa fa-lg fa-times"></span>
+				<span class="fa fa-lg fa-arrow-down"></span>
 			</div>
 		</div>`);
 	// https://stackoverflow.com/questions/24148403/trigger-css-transition-on-appended-element
@@ -65,6 +69,13 @@ function loadWidget(config) {
 	}, 1000);
 
 	(function registerEventListener() {
+		document.querySelector("#waifu-tool .fa-arrow-up").addEventListener("click", function(){
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+		document.querySelector("#waifu-tool .fa-arrow-down").addEventListener("click", function(){
+            window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+        });
+
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto);
 		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
 			if (window.Asteroids) {
@@ -76,8 +87,8 @@ function loadWidget(config) {
 				document.head.appendChild(script);
 			}
 		});
-		document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
-		document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
+		//document.querySelector("#waifu-tool .fa-user-circle").addEventListener("click", loadOtherModel);
+		//document.querySelector("#waifu-tool .fa-street-view").addEventListener("click", loadRandModel);
 		document.querySelector("#waifu-tool .fa-camera-retro").addEventListener("click", () => {
 			showMessage("照好了嘛，是不是很可愛呢？", 6000, 9);
 			Live2D.captureName = "photo.png";
@@ -91,8 +102,8 @@ function loadWidget(config) {
 			showMessage("願你有一天能與重要的人重逢。", 2000, 11);
 			document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
-				document.getElementById("waifu").style.display = "none";
-				document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
+				document.getElementById("waifu-main").style.display = "none";
+				//document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
 			}, 3000);
 		});
 		let devtools = () => {};

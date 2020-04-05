@@ -6,10 +6,43 @@
 		"selector": ".blog-pager-older-link",
 		"text": ["你要繼續往下挖？", "黑歷史都被翻出來啦 Qwq"]
 	}, {
+		"selector": "#waifu-tool .fa-arrow-up",
+		"text": ["跳到最上面！"]
+	}, {
+		"selector": "#waifu-tool .fa-arrow-down",
+		"text": ["跳到最下面！"]
+	}, {
+		"selector": "#waifu-tool .fa-comment",
+		"text": ["我來說句話！"]
+	}, {
+		"selector": "#waifu-tool .fa-camera-retro",
+		"text": ["我擺好 pose 啦"]
+	}, {
+		"selector": "#waifu-tool .fa-info-circle",
+		"text": ["來看看我是怎麼生出來的～"]
+	}, {
+		"selector": "#waifu-tool .fa-times",
+		"text": ["你要和我玩躲貓貓嘛？"]
+	}, {
+		"selector": "#waifu-tool .fa-paper-plane",
+		"text": ["要不要來玩飛機大戰？", "這個按鈕上寫著「不要點擊」。", "怎麽，你想來和我玩個遊戲？", "聽說這樣可以蹦迪！"]
+	},{
         "selector": ".svg-icon-24",
         "text": ["你要分享這篇文章嘛？！？！"]
     }],
 	"click": [{
+		"selector": "#waifu-tool .fa-paper-plane",
+		"text": ["按下 ESC 離開<br>Space 發射子彈<br>方向鍵上前進，左右旋轉<br>B 顯示敵人"]
+	}, {
+		"selector": "#waifu-tool .fa-camera-retro",
+		"text": ["cheese~~"]
+	},, {
+		"selector": "#waifu-tool .fa-arrow-up",
+		"text": ["跳！"]
+	}, {
+		"selector": "#waifu-tool .fa-arrow-down",
+		"text": ["咻！"]
+	}, {
 		"selector": "#waifu #live2d",
 		"text": ["你看到我的主人了嗎？", "幹嘛摸我呀！小心我咬你！", "別摸我，有什麽好摸的！"]
 	}],
