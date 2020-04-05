@@ -98,8 +98,8 @@ function loadWidget(config) {
 			open("https://github.com/nobodyzxc/live2d-widget");
 		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
-			localStorage.setItem("waifu-display", Date.now());
-			showMessage("願你有一天能與重要的人重逢。", 2000, 11);
+			//localStorage.setItem("waifu-display", Date.now());
+			showMessage("躲好啦", 2000, 11);
 			//document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
 				document.getElementById("waifu-main").style.display = "none";
