@@ -226,8 +226,8 @@ function loadWidget(config) {
 			loadlive2d("live2d", `${cdnPath}model/${target}/index.json`);
             console.log("LOAD CDN PATH...");
 		} else {
-			loadlive2d("live2d", `${apiPath}get/?id=${modelId}-${modelTexturesId}`);
-			//loadlive2d("live2d", `https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json`);
+			//loadlive2d("live2d", `${apiPath}get/?id=${modelId}-${modelTexturesId}`);
+			loadlive2d("live2d", `https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json`);
 			console.log(`Live2D 模型 tororo 加載完成`);
 		}
 	}
