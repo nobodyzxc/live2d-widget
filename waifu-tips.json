@@ -29,8 +29,20 @@
 	}, {
 		"selector": "#waifu-tool .fa-paper-plane",
 		"text": ["要不要來玩飛機大戰？", "這個按鈕上寫著「不要點擊」。", "怎麽，你想來和我玩個遊戲？"]
-	},{
-        "selector": ".svg-icon-24",
+	}, {
+        "selector": ".jump-link",
+        "text": ["欸，有興趣點開來看嗎？"]
+    }, {
+        "selector": ".profile-link",
+        "text": ["欸？想認識主人嘛？<br>GitHub 小黑那有更多東西喔～<br>點我旁邊的貓 icon！"]
+    }, {
+        "selector": ".search-expand",
+        "text": ["想找什麼呢？"]
+    }, {
+        "selector": ".num_comments",
+        "text": ["你想要留言？！ ==+"]
+    }, {
+        "selector": ".sharing-button",
         "text": ["你要分享這篇文章嘛？！？！"]
     }],
 	"click": [{
