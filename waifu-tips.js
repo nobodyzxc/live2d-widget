@@ -73,7 +73,7 @@ function loadWidget(config) {
 			Live2D.captureFrame = true;
 		});
 		document.querySelector("#waifu-tool .fa-info-circle").addEventListener("click", () => {
-			open("https://github.com/stevenjoezhang/live2d-widget");
+			open("https://github.com/nobodyzxc/live2d-widget");
 		});
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
 			localStorage.setItem("waifu-display", Date.now());
@@ -209,9 +209,11 @@ function loadWidget(config) {
 			if (!modelList) await loadModelList();
 			let target = randomSelection(modelList.models[modelId]);
 			loadlive2d("live2d", `${cdnPath}model/${target}/index.json`);
+            console.log("LOAD CDN PATH...");
 		} else {
-			loadlive2d("live2d", `${apiPath}get/?id=${modelId}-${modelTexturesId}`);
-			console.log(`Live2D 模型 ${modelId}-${modelTexturesId} 加载完成`);
+			//loadlive2d("live2d", `${apiPath}get/?id=${modelId}-${modelTexturesId}`);
+			loadlive2d("live2d", `https://nobodyzxc.github.io/live2dw/assets/hijiki.model.json`);
+			console.log(`Live2D 模型 hijiki 加载完成`);
 		}
 	}
 
