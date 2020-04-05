@@ -100,7 +100,7 @@ function loadWidget(config) {
 		document.querySelector("#waifu-tool .fa-times").addEventListener("click", () => {
 			localStorage.setItem("waifu-display", Date.now());
 			showMessage("願你有一天能與重要的人重逢。", 2000, 11);
-			document.getElementById("waifu").style.bottom = "-500px";
+			//document.getElementById("waifu").style.bottom = "-500px";
 			setTimeout(() => {
 				document.getElementById("waifu-main").style.display = "none";
 				//document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
@@ -112,7 +112,7 @@ function loadWidget(config) {
 			showMessage("哈哈，你打開了控制台，是想要看看我的小秘密嗎？", 6000, 9);
 		};
 		window.addEventListener("copy", () => {
-			showMessage("你都覆制了些什麽呀，轉載要記得加上出處哦！", 6000, 9);
+			showMessage("你都 copy 了些什麽呀，轉載要記得加上出處哦！", 6000, 9);
 		});
 		window.addEventListener("visibilitychange", () => {
 			if (!document.hidden) showMessage("哇，你終於回來了～", 6000, 9);
@@ -152,9 +152,9 @@ function loadWidget(config) {
 			.then(result => {
 				let text = `這句一言來自 <span>「${result.from}」</span>，是 <span>${result.creator}</span> 在 hitokoto.cn 投稿的。`;
 				showMessage(result.hitokoto, 6000, 9);
-				setTimeout(() => {
-					showMessage(text, 4000, 9);
-				}, 6000);
+				//setTimeout(() => {
+				//	showMessage(text, 4000, 9);
+				//}, 6000);
 			});
 	}
 
