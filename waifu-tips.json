@@ -42,7 +42,7 @@
         "selector": ".num_comments",
         "text": ["你想要留言？！ ==+"]
     }, {
-        "selector": "button[aria-label=\"分享\"]",
+        "selector": ".post-share-buttons",
         "text": ["你要分享這篇文章嘛？！？！"]
     }],
 	"click": [{
