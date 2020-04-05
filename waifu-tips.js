@@ -38,7 +38,18 @@ function loadWidget(config) {
 	let userAction = false,
 		userActionTimer,
 		messageTimer,
-		messageArray = ["好久不见，日子过得好快呢……", "大坏蛋！你都多久没理人家了呀，嘤嘤嘤～", "嗨～快来逗我玩吧！", "拿小拳拳锤你胸口！", "记得把小家加入 Adblock 白名单哦！"];
+		messageArray = [
+            "我是本站管理貓",
+            "喵喵喵～",
+            "本貓還在學習中，<br>請多指教！",
+            "本版文章品質<br>真是不可期待啊（茶",
+            "我要罐罐～",
+            ">///<",
+            "鼻要看我<br>再看我萌死你 >:3",
+            "不要再玩了！快學習#"
+        ];
+
+
 	window.addEventListener("mousemove", () => userAction = true);
 	window.addEventListener("keydown", () => userAction = true);
 	setInterval(() => {
@@ -212,8 +223,8 @@ function loadWidget(config) {
             console.log("LOAD CDN PATH...");
 		} else {
 			//loadlive2d("live2d", `${apiPath}get/?id=${modelId}-${modelTexturesId}`);
-			loadlive2d("live2d", `https://nobodyzxc.github.io/live2dw/assets/hijiki.model.json`);
-			console.log(`Live2D 模型 hijiki 加载完成`);
+			loadlive2d("live2d", `https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json`);
+			console.log(`Live2D 模型 tororo 加载完成`);
 		}
 	}
 
@@ -260,7 +271,7 @@ function initWidget(config, apiPath = "/") {
 		};
 	}
 	document.body.insertAdjacentHTML("beforeend", `<div id="waifu-toggle">
-			<span>看板娘</span>
+			<!-- <span>看板娘</span> -->
 		</div>`);
 	let toggle = document.getElementById("waifu-toggle");
 	toggle.addEventListener("click", () => {
