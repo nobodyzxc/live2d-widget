@@ -164,10 +164,6 @@ function loadWidget(config) {
 		}, timeout);
 	}
 
-    live2d_settings['waifuSize'] = '250x250';
-    live2d_settings['waifuToolFont'] = '36px';
-    live2d_settings['waifuToolLine'] = '50px';
-    live2d_settings['waifuToolTop'] = '-60px';
 	(function initModel() {
 		let modelId = localStorage.getItem("modelId"),
 			modelTexturesId = localStorage.getItem("modelTexturesId");
