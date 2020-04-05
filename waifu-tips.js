@@ -24,6 +24,7 @@ function loadWidget(config) {
 				<!-- <span class="fa fa-lg fa-street-view"></span> -->
 				<span class="fa fa-lg fa-camera-retro"></span>
 				<span class="fa fa-lg fa-info-circle"></span>
+				<span class="fa fa-lg fa-github"></span>
 				<span class="fa fa-lg fa-eye"></span>
 				<span class="fa fa-lg fa-arrow-down"></span>
 			</div>
@@ -75,6 +76,9 @@ function loadWidget(config) {
         });
 
 		document.querySelector("#waifu-tool .fa-comment").addEventListener("click", showHitokoto);
+		document.querySelector("#waifu-tool .fa-github").addEventListener("click", function(){
+            window.open('https://nobodyzxc.github.io', '_blank');
+        });
 		document.querySelector("#waifu-tool .fa-paper-plane").addEventListener("click", () => {
 			if (window.Asteroids) {
 				if (!window.ASTEROIDSPLAYERS) window.ASTEROIDSPLAYERS = [];

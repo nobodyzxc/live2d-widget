@@ -6,6 +6,9 @@
 		"selector": ".blog-pager-older-link",
 		"text": ["你要繼續往下挖？", "黑歷史都被翻出來啦 Qwq"]
 	}, {
+		"selector": "#waifu-tool .fa-github",
+		"text": ["想去見見我的好朋友嗎？", "想去認識一下我的好友嗎？", "你想要找主人？那你要去問問小黑"]
+	}, {
 		"selector": "#waifu-tool .fa-arrow-up",
 		"text": ["跳到最上面！"]
 	}, {
