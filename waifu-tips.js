@@ -98,19 +98,22 @@ function loadWidget(config) {
 		document.querySelector("#waifu-tool .fa-eye").addEventListener("click", () => {
 			//localStorage.setItem("waifu-display", Date.now());
 			//document.getElementById("waifu").style.bottom = "-500px";
+            if(document.getElementById("waifu-tips").style.display != 'none')
+                showMessage("躲好啦", 2000, 11);
+            else
+                showMessage("你叫我？", 2000, 11);
+
 			setTimeout(() => {
                 if(document.getElementById("waifu-tips").style.display != 'none'){
-                    showMessage("躲好啦", 2000, 11);
                     document.getElementById("waifu-tips").style.display = "none";
                     document.getElementById("live2d").style.visibility = "hidden";
                 }
                 else{
-                    showMessage("你叫我？", 2000, 11);
                     document.getElementById("waifu-tips").style.display = "block";
                     document.getElementById("live2d").style.visibility = "visible";
                 }
 				//document.getElementById("waifu-toggle").classList.add("waifu-toggle-active");
-			}, 3000);
+			}, 1000);
 		});
 		let devtools = () => {};
 		console.log("%c", devtools);
