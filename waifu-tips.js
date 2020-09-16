@@ -139,7 +139,7 @@ function loadWidget(config) {
 			if (now > 5 && now <= 7) text = "早上好！一日之計在於晨，美好的一天就要開始了。";
 			else if (now > 7 && now <= 11) text = "上午好！工作順利嘛，不要久坐，多起來走動走動哦！";
 			else if (now > 11 && now <= 13) text = "中午了，工作了一個上午，現在是午餐時間！";
-			else if (now > 13 && now <= 17) text = "午後很容易犯困呢，今天的運動目標完成了嗎？";
+			else if (now > 13 && now <= 17) text = "午後很容易犯睏呢，今天的運動目標完成了嗎？";
 			else if (now > 17 && now <= 19) text = "傍晚了！窗外夕陽的景色很美麗呢，最美不過夕陽紅～";
 			else if (now > 19 && now <= 21) text = "晚上好，今天過得怎麽樣？";
 			else if (now > 21 && now <= 23) text = ["已經這麽晚了呀，早點休息吧，晚安～", "深夜時要愛護眼睛呀！"];
